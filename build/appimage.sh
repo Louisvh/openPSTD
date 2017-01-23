@@ -11,14 +11,10 @@ mkdir -p $APP/$APP.AppDir/usr/
 cd $APP
 
 wget -q https://github.com/probonopd/AppImages/raw/master/functions.sh
-sudo chmod +x functions.sh
+chmod +x functions.sh
 ./functions.sh
 
 cd $APP.AppDir
-
-sudo chown -R $USER /app/
-cp -r /app/* ./usr/
-BINARY=./usr/bin/OpenPSTD-gui
 
 get_icon
 get_apprun
