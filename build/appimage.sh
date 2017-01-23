@@ -16,6 +16,12 @@ chmod +x functions.sh
 
 cd $APP.AppDir
 mkdir usr/bin
+mkdir usr/lib
+mkdir usr/include
+
+cp $HOME/build/Louisvh/openPSTD/OpenPSTD-gui usr/bin/
+cp $HOME/build/Louisvh/openPSTD/openpstd.png ./
+cp $HOME/build/Louisvh/openPSTD/openpstd.desktop ./
 BINARY=./usr/bin/OpenPSTD-gui
 
 
