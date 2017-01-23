@@ -15,6 +15,9 @@ chmod +x functions.sh
 . ./functions.sh
 
 cd $APP.AppDir
+mkdir usr/bin
+BINARY=./usr/bin/OpenPSTD-gui
+
 
 get_icon
 get_apprun
