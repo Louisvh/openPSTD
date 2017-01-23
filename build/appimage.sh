@@ -12,7 +12,7 @@ cd $APP
 
 wget -q https://github.com/probonopd/AppImages/raw/master/functions.sh
 chmod +x functions.sh
-./functions.sh
+. ./functions.sh
 
 cd $APP.AppDir
 
