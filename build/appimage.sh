@@ -37,7 +37,8 @@ echo "after copy_deps"
 pwd
 ls -lAh
 mv home/travis/build/*/openPSTD/*.so usr/lib/x86_64-linux-gnu
-mv usr/local/lib/*.so usr/lib/x86_64-linux-gnu
+mv usr/local/lib/* usr/lib/x86_64-linux-gnu
+mv opt/qt55/lib/* usr/lib/x86_64-linux-gnu
 
 # Delete dangerous libraries; see
 # https://github.com/probonopd/AppImages/blob/master/excludelist
