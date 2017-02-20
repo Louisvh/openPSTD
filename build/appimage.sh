@@ -19,6 +19,16 @@ mkdir usr/bin
 mkdir usr/lib
 mkdir usr/include
 
+echo "created appdir"
+pwd
+ls -lAh ../
+
+cd ..
+find . -name '*.so' -exec mv {} $APP.AppDir/usr/lib \;
+cd $APP.AppDir
+
+ls -lAh usr/lib/
+
 cp $HOME/build/Louisvh/openPSTD/OpenPSTD-gui usr/bin/
 cp $HOME/build/Louisvh/openPSTD/openpstd.png ./
 cp $HOME/build/Louisvh/openPSTD/openpstd.desktop ./
