@@ -42,7 +42,7 @@ mv opt/qt55/lib/* usr/lib/x86_64-linux-gnu
 
 # Delete dangerous libraries; see
 # https://github.com/probonopd/AppImages/blob/master/excludelist
-delete_blacklisted
+#delete_blacklisted
 
 get_desktopintegration $LOWERAPP
 
