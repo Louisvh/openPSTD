@@ -1,5 +1,13 @@
 #!/bin/bash
 if [ $TRAVIS_OS_NAME = "linux" ]; then
+    
+sudo apt-get install -y tree
+echo "initial usr tree:"
+tree -f /usr/
+echo "initial lib tree:"
+tree -f /lib/
+echo "initial opt tree:"
+tree -f /opt/
 
 export ARCH=$(arch)
 
@@ -34,15 +42,16 @@ get_desktop
 copy_deps
 
 echo "after copy_deps"
-pwd
-ls -lAh
+tree -f 
 mv home/travis/build/*/openPSTD/*.so usr/lib/x86_64-linux-gnu
-mv usr/local/lib/* usr/lib/x86_64-linux-gnu
-mv opt/qt55/lib/* usr/lib/x86_64-linux-gnu
+cp usr/local/lib/* usr/lib/x86_64-linux-gnu
+cp opt/qt55/lib/* usr/lib/x86_64-linux-gnu
 
 # Delete dangerous libraries; see
 # https://github.com/probonopd/AppImages/blob/master/excludelist
-#delete_blacklisted
+delete_blacklisted
+echo "after blacklist"
+tree -f 
 
 get_desktopintegration $LOWERAPP
 
