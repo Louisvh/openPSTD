@@ -20,14 +20,6 @@ mkdir usr/lib
 mkdir usr/include
 
 echo "created appdir"
-pwd
-ls -lAh ../
-
-cd ..
-find . -name '*.so' -exec mv {} $APP.AppDir/usr/lib \;
-cd $APP.AppDir
-
-ls -lAh usr/lib/
 
 cp $HOME/build/Louisvh/openPSTD/OpenPSTD-gui usr/bin/
 cp $HOME/build/Louisvh/openPSTD/openpstd.png ./
@@ -40,6 +32,11 @@ get_apprun
 get_desktop
 
 copy_deps
+
+echo "after copy_deps"
+pwd
+ls -lAh
+cp home/travis/build/*/openPSTD/*.so usr/lib/x86_64-linux-gnu
 
 # Delete dangerous libraries; see
 # https://github.com/probonopd/AppImages/blob/master/excludelist
