@@ -2,12 +2,6 @@
 if [ $TRAVIS_OS_NAME = "linux" ]; then
     
 sudo apt-get install -y tree
-echo "initial usr tree:"
-tree -f /usr/
-echo "initial lib tree:"
-tree -f /lib/
-echo "initial opt tree:"
-tree -f /opt/
 
 export ARCH=$(arch)
 
