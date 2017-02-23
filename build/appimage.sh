@@ -53,7 +53,7 @@ delete_blacklisted
 echo "after blacklist"
 tree -f 
 
-get_desktopintegration $LOWERAPP
+#get_desktopintegration $LOWERAPP
 
 GLIBC_NEEDED=$(glibc_needed)
 VERSION=${RELEASE_VERSION}-glibc$GLIBC_NEEDED
