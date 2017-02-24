@@ -47,6 +47,11 @@ delete_blacklisted
 echo "after blacklist"
 tree -f 
 
+#manually add qt plugins, the above scripts don't handle these well
+#debug tree first
+cd /opt/qt55
+tree -f
+
 #get_desktopintegration $LOWERAPP
 
 GLIBC_NEEDED=$(glibc_needed)
